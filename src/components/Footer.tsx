@@ -1,12 +1,17 @@
 import { Mail, Phone, MapPin, Facebook } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { Link } from 'react-router-dom';
 
-interface FooterProps {
-  onNavigate: (path: string) => void;
-}
-
-export const Footer = ({ onNavigate }: FooterProps) => {
+export const Footer = () => {
   const { language, t } = useLanguage();
+
+  const links = [
+    { path: '/resources', label: t('الموارد التعليمية', 'Learning Resources') },
+    { path: '/news', label: t('الإعلانات', 'News') },
+    { path: '/gallery', label: t('المعرض', 'Gallery') },
+    { path: '/alumni', label: t('الخريجون', 'Alumni') },
+    { path: '/faq', label: t('الأسئلة الشائعة', 'FAQ & Testimonials') },
+  ];
 
   return (
     <footer className="bg-[#0c0c14] text-white pt-12 pb-6">
@@ -37,31 +42,16 @@ export const Footer = ({ onNavigate }: FooterProps) => {
           <div>
             <h3 className="text-xl font-bold mb-4">{t('روابط سريعة', 'Quick Links')}</h3>
             <ul className="space-y-2 text-gray-400">
-              <li>
-                <button onClick={() => onNavigate('/resources')} className="hover:text-white transition-colors">
-                  {t('الموارد التعليمية', 'Learning Resources')}
-                </button>
-              </li>
-              <li>
-                <button onClick={() => onNavigate('/news')} className="hover:text-white transition-colors">
-                  {t('الإعلانات', 'News')}
-                </button>
-              </li>
-              <li>
-                <button onClick={() => onNavigate('/gallery')} className="hover:text-white transition-colors">
-                  {t('المعرض', 'Gallery')}
-                </button>
-              </li>
-              <li>
-                <button onClick={() => onNavigate('/alumni')} className="hover:text-white transition-colors">
-                  {t('الخريجون', 'Alumni')}
-                </button>
-              </li>
-              <li>
-                <button onClick={() => onNavigate('/faq')} className="hover:text-white transition-colors">
-                  {t('الأسئلة الشائعة', 'FAQ & Testimonials')}
-                </button>
-              </li>
+              {links.map(link => (
+                <li key={link.path}>
+                  <Link
+                    to={link.path}
+                    className="hover:text-white transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -84,7 +74,6 @@ export const Footer = ({ onNavigate }: FooterProps) => {
           </div>
         </div>
 
-        
         <div className="border-t border-gray-800 pt-6 text-center text-gray-400">
           <p>
             {t(
@@ -93,36 +82,35 @@ export const Footer = ({ onNavigate }: FooterProps) => {
             )}
           </p>
 
-<p className="mt-2">
-  {language === 'ar' ? (
-    <>
-      مُطور بواسطة{' '}
-      <a
-        href="https://api.whatsapp.com/send/?phone=201110008687"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-[#0652ba] hover:underline"
-      >
-        محمد محمد يوسف
-      </a>
-         - طالب بالمدرسة
-    </>
-  ) : (
-    <>
-      Developed by{' '}
-      <a
-        href="https://api.whatsapp.com/send/?phone=201110008687"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-[#0652ba] hover:underline"
-      >
-        Mohammed Mohammed Yousuf 
-      </a>
-       - Student at School
-    </>
-  )}
-</p>
-
+          <p className="mt-2">
+            {language === 'ar' ? (
+              <>
+                مُطور بواسطة{' '}
+                <a
+                  href="https://api.whatsapp.com/send/?phone=201110008687"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#0652ba] hover:underline"
+                >
+                  محمد محمد يوسف
+                </a>
+                {' '} - طالب بالمدرسة
+              </>
+            ) : (
+              <>
+                Developed by{' '}
+                <a
+                  href="https://api.whatsapp.com/send/?phone=201110008687"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#0652ba] hover:underline"
+                >
+                  Mohammed Mohammed Yousuf
+                </a>
+                {' '} - Student at School
+              </>
+            )}
+          </p>
         </div>
       </div>
     </footer>

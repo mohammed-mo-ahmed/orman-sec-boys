@@ -1,8 +1,11 @@
-import { useState, useEffect } from 'react';
+// App.tsx
+import { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { LanguageProvider } from './context/LanguageContext';
 import { Navigation } from './components/Navigation';
 import { NewsTicker } from './components/NewsTicker';
 import { Footer } from './components/Footer';
+
 import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Extracurricular } from './pages/Extracurricular';
@@ -13,83 +16,53 @@ import { Alumni } from './pages/Alumni';
 import { FAQ } from './pages/FAQ';
 import { Contact } from './pages/Contact';
 
-function App() {
-  const [currentPage, setCurrentPage] = useState('/');
 
-  // 👇 هنا السحر — كل ما الصفحة تتغير، نرجع لأعلى الصفحة
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [currentPage]);
+  }, [pathname]);
+  return null;
+};
 
-  const renderPage = () => {
-    if (currentPage === '/') {
-      return <Home onNavigate={setCurrentPage} />;
-    }
-
-    if (currentPage === '/about/overview') {
-      return <About section="overview" />;
-    }
-    if (currentPage === '/about/vision') {
-      return <About section="vision" />;
-    }
-    if (currentPage === '/about/history') {
-      return <About section="history" />;
-    }
-    if (currentPage === '/about/teachers') {
-      return <About section="teachers" />;
-    }
-
-    if (currentPage === '/extracurricular/student-union') {
-      return <Extracurricular section="student-union" />;
-    }
-    if (currentPage === '/extracurricular/clubs') {
-      return <Extracurricular section="clubs" />;
-    }
-    if (currentPage === '/extracurricular/competitions') {
-      return <Extracurricular section="competitions" />;
-    }
-    if (currentPage === '/extracurricular/achievements') {
-      return <Extracurricular section="achievements" />;
-    }
-    if (currentPage === '/extracurricular/library') {
-      return <Extracurricular section="library" />;
-    }
-
-    if (currentPage === '/resources') {
-      return <Resources />;
-    }
-
-    if (currentPage === '/news') {
-      return <News />;
-    }
-
-    if (currentPage === '/gallery') {
-      return <Gallery />;
-    }
-
-    if (currentPage === '/alumni') {
-      return <Alumni />;
-    }
-
-    if (currentPage === '/faq') {
-      return <FAQ onNavigate={setCurrentPage} />;
-    }
-
-    if (currentPage === '/contact') {
-      return <Contact />;
-    }
-
-    return <Home onNavigate={setCurrentPage} />;
-  };
-
+function App() {
   return (
     <LanguageProvider>
-      <div className="min-h-screen flex flex-col">
-        <Navigation currentPage={currentPage} onNavigate={setCurrentPage} />
-        <NewsTicker />
-        <main className="flex-1 bg-gray-50">{renderPage()}</main>
-        <Footer onNavigate={setCurrentPage} />
-      </div>
+      <Router>
+        {/* ScrollToTop */}
+        <ScrollToTop />
+
+        <div className="min-h-screen flex flex-col">
+          <Navigation />
+          <NewsTicker />
+
+          <main className="flex-1 bg-gray-50">
+            <Routes>
+              <Route path="/" element={<Home />} />
+
+              <Route path="/about/overview" element={<About section="overview" />} />
+              <Route path="/about/vision" element={<About section="vision" />} />
+              <Route path="/about/history" element={<About section="history" />} />
+              <Route path="/about/teachers" element={<About section="teachers" />} />
+
+              <Route path="/extracurricular/student-union" element={<Extracurricular section="student-union" />} />
+              <Route path="/extracurricular/clubs" element={<Extracurricular section="clubs" />} />
+              <Route path="/extracurricular/competitions" element={<Extracurricular section="competitions" />} />
+              <Route path="/extracurricular/achievements" element={<Extracurricular section="achievements" />} />
+              <Route path="/extracurricular/library" element={<Extracurricular section="library" />} />
+
+              <Route path="/resources" element={<Resources />} />
+              <Route path="/news" element={<News />} />
+              <Route path="/gallery" element={<Gallery />} />
+              <Route path="/alumni" element={<Alumni />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </main>
+
+          <Footer />
+        </div>
+      </Router>
     </LanguageProvider>
   );
 }
