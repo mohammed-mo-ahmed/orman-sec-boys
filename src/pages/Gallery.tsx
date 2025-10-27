@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Image, Video, X } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { Helmet } from 'react-helmet-async';
 
 export const Gallery = () => {
   const { language, t } = useLanguage();
@@ -78,8 +79,36 @@ const photos = [
       duration: ''
     }
   ];
-
-  return (
+return (
+  <>
+    {/* ✅ Helmet */}
+    <Helmet>
+      <title>
+        {language === 'ar' ? 'المعرض - مدرسة الأورمان الثانوية بنين' : 'Gallery - Al-Orman Secondary School for Boys'}
+      </title>
+      <meta
+        name="description"
+        content={
+          language === 'ar'
+            ? 'استعرض صور وفيديوهات الحياة المدرسية والفعاليات في مدرسة الأورمان الثانوية بنين.'
+            : 'Explore photos and videos of school life and events at Al-Orman Secondary School for Boys.'
+        }
+      />
+      <meta
+        property="og:title"
+        content={language === 'ar' ? 'المعرض - مدرسة الأورمان الثانوية بنين' : 'Gallery - Al-Orman Secondary School for Boys'}
+      />
+      <meta
+        property="og:description"
+        content={
+          language === 'ar'
+            ? 'شاهد صور وفيديوهات الأنشطة المدرسية، النوادي، والفعاليات المختلفة.'
+            : 'View photos and videos of school activities, clubs, and various events.'
+        }
+      />
+      <meta property="og:image" content="https://orman-sec-boys.vercel.app/Images/Backgrounds/logo.png" />
+      <meta property="og:url" content="https://orman-sec-boys.vercel.app/gallery" />
+    </Helmet>
     <div className="min-h-screen bg-gray-50 py-16">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-12">
@@ -207,5 +236,6 @@ const photos = [
         )}
       </div>
     </div>
+    </>
   );
 };

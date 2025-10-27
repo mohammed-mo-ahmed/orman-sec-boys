@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Calendar, X } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { NewsItem } from '../types';
+import { Helmet } from 'react-helmet-async';
 
 export const News = () => {
   const { language, t } = useLanguage();
@@ -39,6 +40,34 @@ export const News = () => {
   ];
 
   return (
+    <>
+      {/* ✅ Helmet */}
+      <Helmet>
+        <title>{language === 'ar' ? 'الأخبار والإعلانات - مدرسة الأورمان' : 'News & Announcements - Al-Orman School'}</title>
+        <meta
+          name="description"
+          content={
+            language === 'ar'
+              ? 'آخر الأخبار والفعاليات من مدرسة الأورمان الثانوية بنين.'
+              : 'Latest news and events from Al-Orman Secondary School for Boys.'
+          }
+        />
+        <meta
+          property="og:title"
+          content={language === 'ar' ? 'الأخبار والإعلانات - مدرسة الأورمان' : 'News & Announcements - Al-Orman School'}
+        />
+        <meta
+          property="og:description"
+          content={
+            language === 'ar'
+              ? 'تابع آخر الأخبار والمبادرات المدرسية والفعاليات المختلفة.'
+              : 'Follow the latest news, school initiatives, and events.'
+          }
+        />
+        <meta property="og:image" content="https://orman-sec-boys.vercel.app/Images/Backgrounds/logo.png" />
+        <meta property="og:url" content="https://orman-sec-boys.vercel.app/news" />
+      </Helmet>
+
     <div className="min-h-screen bg-gray-50 py-16">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-12">
@@ -119,5 +148,6 @@ export const News = () => {
         </div>
       )}
     </div>
+    </>
   );
 };

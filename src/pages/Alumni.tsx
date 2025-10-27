@@ -1,6 +1,7 @@
 import { GraduationCap, Award } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { AlumniStory } from '../types';
+import { Helmet } from 'react-helmet-async';
 
 export const Alumni = () => {
   const { language, t } = useLanguage();
@@ -35,6 +36,16 @@ export const Alumni = () => {
   ];
 
   return (
+    <>
+    <Helmet>
+  <title>{language === 'ar' ? 'خريجونا - مدرسة الأورمان الثانوية بنين' : 'Our Alumni - Al-Orman Secondary School for Boys'}</title>
+  <meta name="description" content={language === 'ar' ? 'تعرف على خريجي مدرسة الأورمان وإنجازاتهم المتميزة.' : 'Meet our alumni and their outstanding achievements.'} />
+  <meta property="og:title" content={language === 'ar' ? 'خريجونا - مدرسة الأورمان الثانوية بنين' : 'Our Alumni - Al-Orman Secondary School for Boys'} />
+  <meta property="og:description" content={language === 'ar' ? 'قصص نجاح وإنجازات خريجينا في مختلف المجالات.' : 'Success stories and achievements of our alumni across various fields.'} />
+  <meta property="og:image" content="https://orman-sec-boys.vercel.app/Images/Backgrounds/logo.png" />
+  <meta property="og:url" content="https://orman-sec-boys.vercel.app/alumni" />
+</Helmet>
+
     <div className="min-h-screen bg-gray-50 py-16">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-12">
@@ -92,5 +103,6 @@ export const Alumni = () => {
         </section>
       </div>
     </div>
+    </>
   );
 };

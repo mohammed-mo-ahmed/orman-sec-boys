@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ChevronDown, Star, Quote } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { Testimonial } from '../types';
+import { Helmet } from 'react-helmet-async';
 
 interface FAQProps {
   onNavigate: (page: string) => void;
@@ -88,8 +89,36 @@ export const FAQ = ({ onNavigate }: FAQProps) => {
       image: ''
     }
   ];
-
-  return (
+return (
+  <>
+    
+    <Helmet>
+      <title>
+        {language === 'ar' ? 'الأسئلة الشائعة - مدرسة الأورمان الثانوية بنين' : 'FAQ - Al-Orman Secondary School for Boys'}
+      </title>
+      <meta
+        name="description"
+        content={
+          language === 'ar'
+            ? 'إجابات على الأسئلة الأكثر شيوعاً حول مدرسة الأورمان الثانوية بنين.'
+            : 'Answers to the most common questions about Al-Orman Secondary School for Boys.'
+        }
+      />
+      <meta
+        property="og:title"
+        content={language === 'ar' ? 'الأسئلة الشائعة - مدرسة الأورمان الثانوية بنين' : 'FAQ - Al-Orman Secondary School for Boys'}
+      />
+      <meta
+        property="og:description"
+        content={
+          language === 'ar'
+            ? 'اكتشف إجابات على الأسئلة الشائعة حول المدرسة، القبول، الرسوم، الأنشطة، والمزيد.'
+            : 'Find answers to frequently asked questions about the school, admissions, fees, activities, and more.'
+        }
+      />
+      <meta property="og:image" content="https://orman-sec-boys.vercel.app/Images/Backgrounds/logo.png" />
+      <meta property="og:url" content="https://orman-sec-boys.vercel.app/faq" />
+    </Helmet>
     <div className="min-h-screen bg-gray-50 py-16">
       <div className="max-w-7xl mx-auto px-4">
         {/* عنوان FAQ */}
@@ -165,5 +194,6 @@ export const FAQ = ({ onNavigate }: FAQProps) => {
         </section>
       </div>
     </div>
+    </>
   );
 };

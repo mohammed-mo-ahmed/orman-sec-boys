@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { ChevronDown, ChevronUp, Target, History, Users, Eye } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { Teacher } from '../types';
+import { Helmet } from 'react-helmet-async';
 
 interface AboutProps {
   section: 'overview' | 'vision' | 'history' | 'teachers';
@@ -358,6 +359,49 @@ const renderTeachersAccordion = () => {
 
   
   return (
+  <>
+  <Helmet>
+      <title>
+        {section === 'overview'
+          ? t('نظرة عامة - مدرسة الأورمان', 'Overview - Al-Orman School')
+          : section === 'vision'
+          ? t('الرؤية والرسالة - مدرسة الأورمان', 'Vision & Mission - Al-Orman School')
+          : section === 'history'
+          ? t('تاريخ المدرسة - مدرسة الأورمان', 'Our History - Al-Orman School')
+          : section === 'teachers'
+          ? t('هيئة التدريس - مدرسة الأورمان', 'Our Teachers - Al-Orman School')
+          : t('مدرسة الأورمان', 'Al-Orman School')}
+      </title>
+      <meta
+        name="description"
+        content={
+          section === 'overview'
+            ? t(
+                'مدرسة الأورمان الثانوية العسكرية بنين تقدم تعليم متميز وتدريب عسكري شامل',
+                'Al-Orman Secondary School for Boys provides outstanding education and comprehensive military training'
+              )
+            : section === 'vision'
+            ? t(
+                'اكتشف رؤيتنا ورسالتنا في إعداد جيل من القادة المتميزين',
+                'Discover our vision and mission to prepare a generation of distinguished leaders'
+              )
+            : section === 'history'
+            ? t(
+                'رحلة المدرسة من التأسيس إلى التميز الحالي',
+                'The school journey from foundation to current excellence'
+              )
+            : section === 'teachers'
+            ? t(
+                'تعرف على فريق المعلمين المتميزين ذوي الخبرة والكفاءة العالية',
+                'Meet our team of distinguished teachers with high experience and competence'
+              )
+            : t(
+                'المدرسة الثانوية العسكرية بنين تقدم تعليم متميز وتدريب شامل',
+                'The secondary military school providing outstanding education and comprehensive training'
+              )
+        }
+      />
+    </Helmet>
     <div className="min-h-screen bg-gray-50 py-16">
       <div className="max-w-7xl mx-auto px-4">
         {section === 'overview' && renderOverview()}
@@ -366,5 +410,6 @@ const renderTeachersAccordion = () => {
         {section === 'teachers' && renderTeachersAccordion()}
       </div>
     </div>
+    </>
   );
 };

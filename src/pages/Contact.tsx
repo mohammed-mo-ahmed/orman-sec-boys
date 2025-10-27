@@ -1,6 +1,8 @@
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+
 
 export const Contact = () => {
   const { language, t } = useLanguage();
@@ -17,7 +19,64 @@ export const Contact = () => {
     setFormData({ name: '', email: '', phone: '', message: '' });
   };
 
+ 
   return (
+    <>
+      {/* ✅ SEO Meta Tags */}
+      <Helmet>
+        <title>
+          {language === 'ar'
+            ? 'اتصل بنا - مدرسة الأورمان الثانوية بنين'
+            : 'Contact Us - Al-Orman Secondary School for Boys'}
+        </title>
+
+        <meta
+          name="description"
+          content={
+            language === 'ar'
+              ? 'تواصل مع مدرسة الأورمان الثانوية بنين عبر الهاتف أو البريد الإلكتروني أو زيارتنا في الدقي، الجيزة.'
+              : 'Contact Al-Orman Secondary School for Boys via phone, email, or visit us in Dokki, Giza.'
+          }
+        />
+
+        <meta
+          name="keywords"
+          content={
+            language === 'ar'
+              ? 'مدرسة الأورمان, اتصل بنا, مدرسة الدقي, تعليم ثانوي, مدرسة ثانوي, مدرسة الأورمان الثانوية بنين, تواصل, بريد إلكتروني, رقم الهاتف'
+              : 'Al Orman School, Contact Us, High School, Secondary, Dokki, Giza, Egypt, Email, Phone'
+          }
+        />
+
+        <meta name="author" content="Al-Orman Secondary School for Boys" />
+
+        <meta
+          property="og:title"
+          content={
+            language === 'ar'
+              ? 'اتصل بنا - مدرسة الأورمان الثانوية بنين'
+              : 'Contact Us - Al-Orman Secondary School for Boys'
+          }
+        />
+
+        <meta
+          property="og:description"
+          content={
+            language === 'ar'
+              ? 'ابقَ على تواصل مع مدرسة الأورمان الثانوية بنين للحصول على المساعدة أو الاستفسارات.'
+              : 'Stay in touch with Al-Orman Secondary School for Boys for support or inquiries.'
+          }
+        />
+
+        <meta
+          property="og:image"
+          content="https://orman-sec-boys.vercel.app/Images/Backgrounds/logo.png"
+        />
+        <meta
+          property="og:url"
+          content="https://orman-sec-boys.vercel.app/contact"
+        />
+      </Helmet>
     <div className="min-h-screen bg-gray-50 py-16">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-12">
@@ -106,6 +165,7 @@ export const Contact = () => {
 
       </div>
     </div>
+    </>
   );
 };
 

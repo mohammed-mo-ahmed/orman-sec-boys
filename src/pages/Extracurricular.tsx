@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { X, Users, Sparkles, Facebook } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { Helmet } from "react-helmet-async";
 
 
 interface ExtracurricularProps {
@@ -377,6 +378,30 @@ const renderLibrary = () => (
   // ✅ العرض الرئيسي
   return (
     <>
+      <Helmet>
+  <title>
+    {language === 'ar'
+      ? 'الأنشطة الطلابية - مدرسة الأورمان الثانوية بنين'
+      : 'Extracurricular Activities - Al-Orman Secondary School for Boys'}
+  </title>
+  <meta
+    name="description"
+    content={
+      language === 'ar'
+        ? 'تعرف على الأنشطة الطلابية بمدرسة الأورمان الثانوية بنين، بما في ذلك اتحاد الطلاب، النوادي، المسابقات، والإنجازات.'
+        : 'Explore the extracurricular activities at Al-Orman Secondary School for Boys, including the student union, clubs, competitions, and achievements.'
+    }
+  />
+  <meta
+    name="keywords"
+    content={
+      language === 'ar'
+        ? 'مدرسة الأورمان, الأنشطة الطلابية, اتحاد الطلاب, نوادي المدرسة, مسابقات, إنجازات, مكتبة'
+        : 'Al Orman School, extracurricular, student union, clubs, competitions, achievements, library'
+    }
+  />
+</Helmet>
+
       {section === 'library' ? (
         <div className="w-full">{renderLibrary()}</div>
       ) : (

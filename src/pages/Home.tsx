@@ -1,7 +1,7 @@
-
 import { useState, useEffect } from "react";
 import { GraduationCap, Target, Users, Award, BookOpen, Shield } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
+import { Helmet } from 'react-helmet-async';
 
 interface HomeProps {
   onNavigate: (path: string) => void;
@@ -54,8 +54,34 @@ export const Home = ({ onNavigate }: HomeProps) => {
 
   const mainTitle = t("مدرسة الأورمان الثانوية العسكرية بنين", "Al-Orman Secondary School for Boys");
   const subTitle = t("نسعى لتخريج جيل متميز يجمع بين التفوق الأكاديمي والانضباط العسكري", "We strive to graduate distinguished individuals combining academic excellence and military discipline");
-
-  return (
+ return (
+    <>
+      {/* ✅ Helmet */}
+      <Helmet>
+        <title>{language === 'ar' ? 'مدرسة الأورمان الثانوية العسكرية بنين' : 'Al-Orman Secondary School for Boys'}</title>
+        <meta
+          name="description"
+          content={
+            language === 'ar'
+              ? 'مدرسة الأورمان الثانوية العسكرية بنين تقدم تجربة تعليمية فريدة تجمع بين الأكاديمية والانضباط العسكري.'
+              : 'Al-Orman Secondary School for Boys offers a unique educational experience combining academics and military discipline.'
+          }
+        />
+        <meta
+          property="og:title"
+          content={language === 'ar' ? 'مدرسة الأورمان الثانوية العسكرية بنين' : 'Al-Orman Secondary School for Boys'}
+        />
+        <meta
+          property="og:description"
+          content={
+            language === 'ar'
+              ? 'استكشف برامجنا الأكاديمية والأنشطة المتنوعة والإنجازات المتميزة للطلاب.'
+              : 'Explore our academic programs, diverse activities, and students’ outstanding achievements.'
+          }
+        />
+        <meta property="og:image" content="https://orman-sec-boys.vercel.app/Images/Backgrounds/logo.png" />
+        <meta property="og:url" content="https://orman-sec-boys.vercel.app/" />
+      </Helmet>
     <div className="min-h-screen">
       <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-[#0652ba]/40 to-[#0652ba]/60 z-10"></div>
@@ -160,5 +186,6 @@ export const Home = ({ onNavigate }: HomeProps) => {
 
     
     </div>
+    </>
   );
 };

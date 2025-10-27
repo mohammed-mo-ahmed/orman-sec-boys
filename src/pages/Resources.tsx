@@ -1,5 +1,6 @@
 import { BookOpen, Video, ExternalLink, Download } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { Helmet } from 'react-helmet-async';
 
 export const Resources = () => {
   const { language, t } = useLanguage();
@@ -49,7 +50,31 @@ export const Resources = () => {
     }
   ];
 
-  return (
+return (
+    <>
+      <Helmet>
+        <title>{language === 'ar' ? 'الموارد التعليمية - مدرسة الأورمان' : 'Learning Resources - Al-Orman School'}</title>
+        <meta
+          name="description"
+          content={
+            language === 'ar'
+              ? 'مجموعة شاملة من الموارد التعليمية لدعم رحلتك الأكاديمية في مدرسة الأورمان.'
+              : 'A comprehensive collection of educational resources to support your academic journey at Al-Orman School.'
+          }
+        />
+        <meta property="og:title" content={language === 'ar' ? 'الموارد التعليمية - مدرسة الأورمان' : 'Learning Resources - Al-Orman School'} />
+        <meta
+          property="og:description"
+          content={
+            language === 'ar'
+              ? 'اكتشف أهم المنصات التعليمية والمصادر المفيدة للطلاب.'
+              : 'Discover essential learning platforms and helpful resources for students.'
+          }
+        />
+        <meta property="og:image" content="https://orman-sec-boys.vercel.app/Images/Backgrounds/logo.png" />
+        <meta property="og:url" content="https://orman-sec-boys.vercel.app/resources" />
+      </Helmet>
+
     <div className="min-h-screen bg-gray-50 py-16">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-12">
@@ -91,5 +116,6 @@ export const Resources = () => {
         </section>
       </div>
     </div>
+    </>
   );
 };
