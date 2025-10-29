@@ -24,18 +24,6 @@ const TypewriterTitle = ({ text, trigger }: { text: string; trigger: string }) =
           {char}
         </span>
       ))}
-      <style jsx>{`
-        @keyframes typewriter-char {
-          from {
-            opacity: 0;
-            transform: translateY(0.2em);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      `}</style>
     </h1>
   );
 };
@@ -159,20 +147,6 @@ export const Home = ({}: HomeProps) => {
               </Link>
             </div>
           </div>
-          <style jsx>{`
-            @keyframes fadeIn {
-              from {
-                opacity: 0;
-              }
-              to {
-                opacity: 1;
-              }
-            }
-            .animate-fade-in {
-              animation: fadeIn 1s forwards;
-              animation-delay: 2.5s;
-            }
-          `}</style>
         </section>
 
         {/* Features Section */}
