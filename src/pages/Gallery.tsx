@@ -81,7 +81,7 @@ const photos = [
   ];
 return (
   <>
-    {/* ✅ Helmet */}
+    
     <Helmet>
       <title>
         {language === 'ar' ? 'المعرض - مدرسة الأورمان الثانوية بنين' : 'Gallery - Al-Orman Secondary School for Boys'}

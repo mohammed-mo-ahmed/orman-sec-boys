@@ -1,4 +1,3 @@
-// src/pages/Clubs.tsx
 import { useLanguage } from "../../context/LanguageContext";
 import { Helmet } from "react-helmet-async";
 

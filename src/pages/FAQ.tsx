@@ -97,13 +97,13 @@ export const FAQ = () => {
       <div className="min-h-screen bg-gray-50 py-16">
         <div className="max-w-7xl mx-auto px-4">
 
-          {/* عنوان FAQ */}
+          
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">{t('الأسئلة الشائعة', 'Frequently Asked Questions')}</h1>
             <p className="text-xl text-gray-600">{t('إجابات على الأسئلة الأكثر شيوعاً حول المدرسة', 'Answers to the most common questions about the school')}</p>
           </div>
 
-          {/* الأسئلة */}
+        
           <section className="mb-20">
             <div className="max-w-4xl mx-auto space-y-4">
               {faqs.map((faq, index) => (
@@ -125,7 +125,7 @@ export const FAQ = () => {
             </div>
           </section>
 
-          {/* Testimonials */}
+          
           <section className="mb-20">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold mb-6 text-gray-900">{t('آراء وشهادات', 'Testimonials')}</h2>
@@ -157,7 +157,7 @@ export const FAQ = () => {
             </div>
           </section>
 
-          {/* زر الاتصال */}
+         
           <section className="mt-16 bg-[#0652ba] text-white rounded-xl p-12 text-center">
             <h2 className="text-3xl font-bold mb-4">{t('لديك سؤال آخر؟', 'Have Another Question?')}</h2>
             <p className="text-xl mb-8 opacity-90">{t('لا تتردد في التواصل معنا للحصول على المزيد من المعلومات', 'Feel free to contact us for more information')}</p>

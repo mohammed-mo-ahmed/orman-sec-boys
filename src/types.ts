@@ -37,5 +37,5 @@ export interface AlumniStory {
   name: { ar: string; en: string };
   achievement: { ar: string; en: string };
   image: string;
-  link: { ar: string; en: string }; // ✅ تأكد من وجود link هنا
+  link: { ar: string; en: string }; 
 }

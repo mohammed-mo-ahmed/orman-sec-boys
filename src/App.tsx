@@ -1,4 +1,3 @@
-// App.tsx
 import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { LanguageProvider } from './context/LanguageContext';
@@ -36,7 +35,7 @@ function App() {
   return (
     <LanguageProvider>
       <Router>
-        {/* ScrollToTop */}
+        
         <ScrollToTop />
 
         <div className="min-h-screen flex flex-col">

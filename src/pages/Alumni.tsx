@@ -83,7 +83,7 @@ export const Alumni = () => {
             {alumniStories.map((alumni) => (
               <a
                 key={alumni.id}
-                href={alumni.link[language]} // 👈 بيختار اللينك المناسب حسب اللغة
+                href={alumni.link[language]} 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all transform hover:-translate-y-2 border border-gray-100 block"

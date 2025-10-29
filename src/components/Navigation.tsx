@@ -12,13 +12,13 @@ export const Navigation = () => {
   const location = useLocation();
   const navRef = useRef<HTMLDivElement | null>(null);
 
-  // إغلاق القوائم عند تغيير الصفحة
+  
   useEffect(() => {
     setMobileMenuOpen(false);
     setOpenDropdown(null);
   }, [location.pathname]);
 
-  // إغلاق القوائم عند الضغط خارجها
+  
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (navRef.current && !navRef.current.contains(e.target as Node)) {
@@ -151,7 +151,7 @@ export const Navigation = () => {
             />
           </Link>
 
-          {/* ديسكتوب */}
+          
           <div className="hidden lg:flex items-center gap-2">
             {navigationItems.map((item) => renderNavItem(item))}
 
@@ -164,7 +164,7 @@ export const Navigation = () => {
             </button>
           </div>
 
-          {/* موبايل */}
+          
           <div className="lg:hidden flex items-center gap-2">
             <button
               onClick={toggleLanguage}
@@ -182,7 +182,7 @@ export const Navigation = () => {
           </div>
         </div>
 
-        {/* مينو الموبايل */}
+        
         {mobileMenuOpen && (
           <div className="lg:hidden pb-4 space-y-1">
             {navigationItems.map((item) => renderNavItem(item, true))}

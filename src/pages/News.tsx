@@ -41,7 +41,7 @@ export const News = () => {
 
   return (
     <>
-      {/* ✅ Helmet */}
+      
       <Helmet>
         <title>{language === 'ar' ? 'الأخبار والإعلانات - مدرسة الأورمان' : 'News & Announcements - Al-Orman School'}</title>
         <meta
@@ -79,7 +79,7 @@ export const News = () => {
           </p>
         </div>
 
-        {/* 📰 بطاقات الأخبار */}
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {newsItems.map((item) => (
             <article
@@ -89,7 +89,7 @@ export const News = () => {
               <div
                 className="h-48 overflow-hidden bg-gray-200 cursor-pointer"
                 onClick={() => {
-                  // 👇 الزووم متاح فقط لصورة امتحان أكتوبر
+                 
                   if (item.id === '2') setZoomImage(item.image);
                 }}
               >
@@ -127,7 +127,7 @@ export const News = () => {
         </div>
       </div>
 
-      {/* 🔍 نافذة الزووم */}
+      
       {zoomImage && (
         <div
           onClick={() => setZoomImage(null)}

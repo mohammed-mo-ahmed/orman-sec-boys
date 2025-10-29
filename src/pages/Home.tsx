@@ -1,4 +1,3 @@
-// src/pages/Home.tsx
 import { GraduationCap, Target, Users, Award, BookOpen, Shield } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 import { Helmet } from "react-helmet-async";
@@ -120,7 +119,7 @@ export const Home = ({}: HomeProps) => {
       </Helmet>
 
       <div className="min-h-screen">
-        {/* Hero Section */}
+        
         <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-[#0652ba]/40 to-[#0652ba]/60 z-10"></div>
           <div
@@ -149,7 +148,7 @@ export const Home = ({}: HomeProps) => {
           </div>
         </section>
 
-        {/* Features Section */}
+        
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4">
             <h2 className="text-4xl font-bold text-center mb-4 text-gray-900">
@@ -183,7 +182,7 @@ export const Home = ({}: HomeProps) => {
           </div>
         </section>
 
-        {/* Stats Section */}
+        
         <section className="py-20 bg-gradient-to-br from-[#0652ba] to-[#0652ba]/90 text-white">
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
