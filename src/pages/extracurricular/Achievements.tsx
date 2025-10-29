@@ -1,4 +1,3 @@
-// src/pages/Achievements.tsx
 import { useState } from "react";
 import { X } from "lucide-react";
 import { useLanguage } from "../../context/LanguageContext";
@@ -13,9 +12,9 @@ export const Achievements = () => {
   ];
 
   const topStudents = [
-    { title: { ar: "الصف الأول الثانوي", en: "First Secondary Grade" }, image: "https://i.postimg.cc/your-image1.jpg" },
-    { title: { ar: "الصف الثاني الثانوي", en: "Second Secondary Grade" }, image: "https://i.postimg.cc/your-image2.jpg" },
-    { title: { ar: "الصف الثالث الثانوي", en: "Third Secondary Grade" }, image: "https://i.postimg.cc/your-image3.jpg" },
+    { title: { ar: "الصف الأول الثانوي", en: "First Secondary Grade" }, image: "" },
+    { title: { ar: "الصف الثاني الثانوي", en: "Second Secondary Grade" }, image: "" },
+    { title: { ar: "الصف الثالث الثانوي", en: "Third Secondary Grade" }, image: "" },
   ];
 
   return (
