@@ -146,7 +146,7 @@ export const Home = ({}: HomeProps) => {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
-                to="/about/overview"
+                to="/overview"
                 className="px-8 py-3 bg-white text-[#0652ba] rounded-lg font-bold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg"
               >
                 {t("اكتشف المزيد", "Discover More")}

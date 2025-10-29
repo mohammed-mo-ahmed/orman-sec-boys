@@ -1,8 +1,8 @@
 
 import { useState } from 'react';
 import { ChevronDown, ChevronUp, Target, History, Users, Eye } from 'lucide-react';
-import { useLanguage } from '../context/LanguageContext';
-import { Teacher } from '../types';
+import { useLanguage } from '../../context/LanguageContext';
+import { Teacher } from '../../types';
 import { Helmet } from 'react-helmet-async';
 
 interface AboutProps {

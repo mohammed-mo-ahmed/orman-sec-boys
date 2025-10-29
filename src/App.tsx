@@ -7,8 +7,15 @@ import { NewsTicker } from './components/NewsTicker';
 import { Footer } from './components/Footer';
 
 import { Home } from './pages/Home';
-import { About } from './pages/About';
-import { Extracurricular } from './pages/Extracurricular';
+import { Overview } from './pages/about/overview';
+import { Vision } from './pages/about/vision';
+import { History } from './pages/about//history';
+import { Teachers } from './pages/about/teachers';
+import { Clubs } from './pages/extracurricular/Clubs';
+import { Competitions } from './pages/extracurricular/Competitions';
+import { Achievements } from './pages/extracurricular/Achievements';
+import { Library } from './pages/extracurricular/Library';
+import { StudentUnion } from './pages/extracurricular/StudentUnion';
 import { Resources } from './pages/Resources';
 import { News } from './pages/News';
 import { Gallery } from './pages/Gallery';
@@ -40,16 +47,18 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
 
-              <Route path="/about/overview" element={<About section="overview" />} />
-              <Route path="/about/vision" element={<About section="vision" />} />
-              <Route path="/about/history" element={<About section="history" />} />
-              <Route path="/about/teachers" element={<About section="teachers" />} />
+              <Route path="/overview" element={<Overview />} />
+              <Route path="/vision" element={<Vision />} />
+              <Route path="/history" element={<History />} />
+              <Route path="/teachers" element={<Teachers />} />
 
-              <Route path="/extracurricular/student-union" element={<Extracurricular section="student-union" />} />
-              <Route path="/extracurricular/clubs" element={<Extracurricular section="clubs" />} />
-              <Route path="/extracurricular/competitions" element={<Extracurricular section="competitions" />} />
-              <Route path="/extracurricular/achievements" element={<Extracurricular section="achievements" />} />
-              <Route path="/extracurricular/library" element={<Extracurricular section="library" />} />
+              <Route path="/student-union" element={<StudentUnion />} />
+              <Route path="/clubs" element={<Clubs />} />
+              <Route path="/competitions" element={<Competitions />} />
+              <Route path="/achievements" element={<Achievements />} />
+              <Route path="/library" element={<Library />} />
+
+
 
               <Route path="/resources" element={<Resources />} />
               <Route path="/news" element={<News />} />
