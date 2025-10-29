@@ -1,12 +1,13 @@
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
-import { useState } from 'react';
+{/*import { useState } from 'react';*/}
 import { Helmet } from 'react-helmet-async';
 
 
 export const Contact = () => {
   const { language, t } = useLanguage();
-  const [formData, setFormData] = useState({
+
+ {/* const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
@@ -17,7 +18,7 @@ export const Contact = () => {
     e.preventDefault();
     alert(t('شكراً لتواصلك معنا! سنرد عليك قريباً.', 'Thank you for contacting us! We will reply soon.'));
     setFormData({ name: '', email: '', phone: '', message: '' });
-  };
+  };*/}
 
  
   return (
