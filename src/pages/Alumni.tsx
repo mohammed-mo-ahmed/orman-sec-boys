@@ -1,7 +1,9 @@
-import { GraduationCap, Award } from 'lucide-react';
+import { GraduationCap } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { AlumniStory } from '../types';
 import { Helmet } from 'react-helmet-async';
+
+
 
 export const Alumni = () => {
   const { language, t } = useLanguage();

@@ -1,4 +1,4 @@
-import { BookOpen, Video, ExternalLink, Download } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { Helmet } from 'react-helmet-async';
 

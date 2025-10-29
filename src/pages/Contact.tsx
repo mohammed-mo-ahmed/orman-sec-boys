@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
