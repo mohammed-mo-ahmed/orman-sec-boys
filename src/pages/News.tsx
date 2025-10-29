@@ -124,7 +124,7 @@ export const News = () => {
                     {item.content[language]}
                   </p>
 
-                  {/* عرض الزر فقط لو فيه رابط */}
+                  
                   {item.link && (
                     <a
                       href={item.link}
@@ -141,7 +141,7 @@ export const News = () => {
           </div>
         </div>
 
-        {/* نافذة تكبير الصور */}
+        
         {zoomImage && (
           <div
             onClick={() => setZoomImage(null)}
