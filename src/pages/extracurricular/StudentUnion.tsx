@@ -1,5 +1,5 @@
 // src/pages/StudentUnion.tsx
-import { Facebook, Users, Sparkles } from "lucide-react";
+import { Facebook, Users } from "lucide-react";
 import { useLanguage } from "../../context/LanguageContext";
 import { Helmet } from "react-helmet-async";
 

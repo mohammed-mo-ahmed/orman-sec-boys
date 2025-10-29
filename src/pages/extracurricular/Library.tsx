@@ -10,7 +10,7 @@ export const Library = () => {
     { title: { ar: "الكتب الأدبية", en: "Literature Books" }, desc: { ar: "روايات، شعر، ومقالات أدبية", en: "Novels, poetry, and literary essays" }, icon: "📖" },
     { title: { ar: "قسم التكنولوجيا", en: "Technology Section" }, desc: { ar: "كتب عن البرمجة، الإلكترونيات، والذكاء الاصطناعي", en: "Books on programming, electronics, and AI" }, icon: "💻" },
     { title: { ar: "قسم اللغات", en: "Language Section" }, desc: { ar: "كتب لتعلم الإنجليزية والألمانية ولغات أخرى", en: "Books for learning English, German, and more" }, icon: "🌍" },
-    { title: { ar: "الوسائط المتعددة", en: "Multimedia Section" }, desc: { ar: "أفلام تعليمية ومواد رقمية للبحث", en: "Educational videos and digital materials for research" }, icon: "🎬" },
+    { title: { ar: "المراجع والموارد", en: "Reference Materials" }, desc: { ar: "كتب مرجعية، خرائط، ومواد متنوعة للطلاب", en: "Books, maps, and other resources for students" }, icon: "📂" },
     { title: { ar: "ركن القراءة الهادئة", en: "Quiet Reading Corner" }, desc: { ar: "مساحة مريحة للقراءة الفردية والاسترخاء", en: "A cozy space for personal reading and relaxation" }, icon: "☕" },
   ];
 
