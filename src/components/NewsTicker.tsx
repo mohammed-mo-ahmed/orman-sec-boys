@@ -6,20 +6,24 @@ export const NewsTicker = () => {
   const { t } = useLanguage();
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const newsItems = [
-    {
-      ar: 'اقتراب موعد الأمتحانات الشهرية',
-      en: 'The monthly exams are approaching'
-    },
-    {
-      ar: 'التحذير من الغياب - التهديد بالفصل إذا تجاوزت المدة المحددة',
-      en: 'Warning of absence - threat of dismissal if the specified period exceeds'
-    },
-    {
-      ar: 'مسابقة جائزة الدولة للمبدع الصغير - اشترك الآن',
-      en: 'State Prize Competition for Young Innovator - Subscribe now'
-    }
-  ];
+ const newsItems = [
+  {
+    ar: 'اقتراب موعد الأمتحانات الشهرية',
+    en: 'The monthly exams are approaching'
+  },
+  {
+    ar: 'التحذير من الغياب - التهديد بالفصل إذا تجاوزت المدة المحددة',
+    en: 'Warning of absence - threat of dismissal if the specified period exceeds'
+  },
+  {
+    ar: 'مسابقة جائزة الدولة للمبدع الصغير - اشترك الآن',
+    en: 'State Prize Competition for Young Innovator - Subscribe now'
+  },
+  {
+    ar: 'مسابقة القرآن الكريم',
+    en: 'Quran Recitation Competition'
+  }
+];
 
   useEffect(() => {
     const timer = setInterval(() => {

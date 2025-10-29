@@ -36,7 +36,22 @@ export const News = () => {
       },
       image: '/Images/Unclassified/News/October-exam.png',
       link: 'https://m2.youm7.com/story/2025/10/20/%D8%AC%D8%AF%D9%88%D9%84-%D8%A7%D9%85%D8%AA%D8%AD%D8%A7%D9%86-%D8%B4%D9%87%D8%B1-%D8%A3%D9%83%D8%AA%D9%88%D8%A8%D8%B1-%D9%84%D8%B7%D9%84%D8%A7%D8%A8-%D8%A7%D8%A8%D8%AA%D8%AF%D8%A7%D8%A6%D9%89-%D9%88%D8%A5%D8%B9%D8%AF%D8%A7%D8%AF%D9%89-%D9%88%D8%AB%D8%A7%D9%86%D9%88%D9%89-%D9%81%D9%89-%D8%A7%D9%84%D8%AC%D9%8A%D8%B2%D8%A9/7164963'
-    }
+    },
+{
+  id: '3',
+  title: {
+    ar: 'مسابقة القرآن الكريم',
+    en: 'Quran Recitation Competition'
+  },
+  date: '2025-11-03',
+  content: {
+    ar: 'تُقام مسابقة القرآن الكريم بمدرسة الشهيد أبو دهب بنين في تمام الساعة الثامنة والنصف صباحًا، لمدة أربعة أيام من الإثنين ٣ نوفمبر حتى الخميس ٦ نوفمبر، وتشمل المدارس الحكومية والخاصة. اليومان الأول والثاني للمرحلة الابتدائية، والثالث للإعدادية، والرابع (الخميس) للثانوية ولمن تخلف عن الموعد.',
+    en: 'The Quran Recitation Competition will be held at El-Shaheed Abu Dahab Boys School at 8:30 AM, running for four days from Monday, November 3 to Thursday, November 6. The event includes both public and private schools: the first two days are for primary students, the third for preparatory, and the fourth (Thursday) for secondary students and absentees.'
+  },
+  image: '/Images/Unclassified/News/Quran.png',
+  link: ''
+}
+
   ];
 
   return (
@@ -90,7 +105,7 @@ export const News = () => {
                 className="h-48 overflow-hidden bg-gray-200 cursor-pointer"
                 onClick={() => {
                  
-                  if (item.id === '2') setZoomImage(item.image);
+                  if (item.id === '2'|| item.id === '3') setZoomImage(item.image);
                 }}
               >
                 <img
