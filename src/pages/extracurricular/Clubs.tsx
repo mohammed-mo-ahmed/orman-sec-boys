@@ -4,14 +4,43 @@ import { Helmet } from "react-helmet-async";
 export const Clubs = () => {
   const { language, t } = useLanguage();
 
-  const clubs = [
-    { name: { ar: "نادي القراءه", en: "Reading Club" }, description: { ar: "نادي يهتم بقراءة الكتب ومناقشتها", en: "A club focused on reading and discussing books" }, icon: "📖" },
-    { name: { ar: "نادي العلوم", en: "Science Club" }, description: { ar: "التجارب العلمية والابتكار", en: "Scientific experiments and innovation" }, icon: "🔬" },
-    { name: { ar: "نادي الرياضيات", en: "Math Club" }, description: { ar: "حل المسائل والمنافسات", en: "Problem solving and competitions" }, icon: "📐" },
-    { name: { ar: "نادي البرمجة", en: "Programming Club" }, description: { ar: "تطوير التطبيقات والألعاب", en: "Application and game development" }, icon: "💻" },
-    { name: { ar: "نادي الفنون", en: "Arts Club" }, description: { ar: "الرسم والتصميم الإبداعي", en: "Drawing and creative design" }, icon: "🎨" },
-    { name: { ar: "نادي الموسيقى", en: "Music Club" }, description: { ar: "العزف والإنشاد", en: "Playing instruments and singing" }, icon: "🎵" },
-  ];
+const clubs = [
+  { 
+    name: { ar: "نادي البرمجة والإلكترونيات", en: "Programming Club" }, 
+    description: { ar: "تطوير التطبيقات والمشاريع الإلكترونية", en: "Application and hardware projects development" }, 
+    icon: "💻" 
+  },
+  { 
+    name: { ar: "نادي الرياضيات", en: "Math Club" }, 
+    description: { ar: "حل المسائل والمنافسات", en: "Problem solving and competitions" }, 
+    icon: "📐" 
+  },
+  { 
+    name: { ar: "نادي الفيزياء", en: "Physics Club" }, 
+    description: { ar: "حل المسائل والمنافسات", en: "Problem solving and competitions" }, 
+    icon: "⚛️" 
+  },
+  { 
+    name: { ar: "نادي الشطرنج", en: "Chess Club" }, 
+    description: { ar: "الاستراتيجية والتفكير المنطقي", en: "Strategy and logical thinking" }, 
+    icon: "♟️" 
+  },
+  { 
+    name: { ar: "نادي القراءة", en: "Reading Club" }, 
+    description: { ar: "نادي يهتم بقراءة الكتب ومناقشتها", en: "A club focused on reading and discussing books" }, 
+    icon: "📖" 
+  },
+  { 
+    name: { ar: "نادي الفنون", en: "Arts Club" }, 
+    description: { ar: "الرسم والتصميم الإبداعي", en: "Drawing and creative design" }, 
+    icon: "🎨" 
+  },
+  { 
+    name: { ar: "نادي الموسيقى", en: "Music Club" }, 
+    description: { ar: "العزف والإنشاد", en: "Playing instruments and singing" }, 
+    icon: "🎵" 
+  },
+];
 
   return (
     <>
