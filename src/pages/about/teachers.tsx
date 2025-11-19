@@ -17,6 +17,7 @@ const teachers: Teacher[] = [
   { name: { ar: 'أ. طارق سنجر', en: 'Mr. Tarek Singer' }, subject: { ar: 'اللغة العربية', en: 'Arabic Language' }, image: '/Images/Teachers/Mr.Tarek-Singer.jpg' },
   { name: { ar: 'أ. ناصر عماره', en: 'Mr. Nasser Amara' }, subject: { ar: 'اللغة الإنجليزية', en: 'English Language' }, image: '/Images/Teachers/Mr.Nasser-Amara.png' },
   { name: { ar: 'أ. عادل', en: 'Mr. Adel' }, subject: { ar: 'اللغة الإنجليزية', en: 'English Language' }, image: '/Images/Teachers/Unknown.jpg' },
+  { name: { ar: 'أ. خالد رشاد', en: 'Mr. Khaled Rashad ' }, subject: { ar: 'اللغة الإنجليزية', en: 'English Language' }, image: '/Images/Teachers/Mr.Khaled-Rashad.jpg' },
   { name: { ar: 'أ. محمود طه', en: 'Mr. Mahmoud Taha' }, subject: { ar: 'الرياضيات', en: 'Mathematics' }, image: '/Images/Teachers/Mr.Mahmoud-Taha.jpg' },
   { name: { ar: 'أ. احمد علي', en: 'Mr. Ahmed Ali' }, subject: { ar: 'الرياضيات', en: 'Mathematics' }, image: '/Images/Teachers/Mr.Ahmed-Ali.jpg' },
   { name: { ar: 'أ. سامح صقر', en: 'Mr. Sameh Saqr' }, subject: { ar: 'العلوم المتكاملة', en: 'Integrated Sciences' }, image: '/Images/Teachers/Mr.Sameh-Saqr.jpg' },
