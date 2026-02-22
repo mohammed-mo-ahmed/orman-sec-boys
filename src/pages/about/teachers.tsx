@@ -13,7 +13,7 @@ export const Teachers = () => {
   };
 
 const teachers: Teacher[] = [
-  { name: { ar: 'أ. عطية محمد', en: 'Mr. Attia Mohammed' }, subject: { ar: 'مدير المدرسة', en: 'School Principal' }, image: '/Images/Teachers/Mr.Attia-Mohammed.jpg' },
+  { name: { ar: 'أ. نُهيدة', en: 'Ms. Nohida' }, subject: { ar: 'مديرة المدرسة', en: 'School Principal' }, image: '' },
   { name: { ar: 'أ. طارق سنجر', en: 'Mr. Tarek Singer' }, subject: { ar: 'اللغة العربية', en: 'Arabic Language' }, image: '/Images/Teachers/Mr.Tarek-Singer.jpg' },
   { name: { ar: 'أ. ناصر عماره', en: 'Mr. Nasser Amara' }, subject: { ar: 'اللغة الإنجليزية', en: 'English Language' }, image: '/Images/Teachers/Mr.Nasser-Amara.png' },
   { name: { ar: 'أ. عادل', en: 'Mr. Adel' }, subject: { ar: 'اللغة الإنجليزية', en: 'English Language' }, image: '/Images/Teachers/Unknown.jpg' },
@@ -32,8 +32,8 @@ const teachers: Teacher[] = [
   { name: { ar: 'أ. عصام الكاشف', en: 'Mr. Essam El-Kashef' }, subject: { ar: 'علم النفس', en: 'Psychology' }, image: '/Images/Teachers/Mr.Essam-El-Kashef.jpg' },
   { name: { ar: 'أ. عبدالجواد افندينا', en: 'Mr. Abdelgawad Afandina' }, subject: { ar: 'علم النفس', en: 'Psychology' }, image: '/Images/Teachers/Mr.Abdelgawad-Afandina.png' },
   { name: { ar: '', en: '' }, subject: { ar: 'علوم الحاسوب', en: 'Computer Science' }, image: '/Images/Teachers/Unknown.jpg' },
-  { name: { ar: 'أ. حسام شرف', en: 'Mr. Hossam Sharaf' }, subject: { ar: 'اللغة الألمانية', en: 'German Language' }, image: '/Images/Teachers/Mr.Hossam-Sharaf.jpg' },
   { name: { ar: 'أ. محمد السيد', en: 'Mr. Mohamed El-Sayed' }, subject: { ar: 'اللغة الألمانية', en: 'German Language' }, image: '/Images/Teachers/Mr.Mohamed-El-Sayed.jpg' },
+  { name: { ar: 'أ. حسام شرف', en: 'Mr. Hossam Sharaf' }, subject: { ar: 'اللغة الألمانية', en: 'German Language' }, image: '/Images/Teachers/Mr.Hossam-Sharaf.jpg' },
   { name: { ar: '', en: '' }, subject: { ar: 'اللغة الفرنسية', en: 'French Language' }, image: '/Images/Teachers/Unknown.jpg' },
   { name: { ar: 'أ. فاطمة كامل', en: 'Ms. Fatma Kamel' }, subject: { ar: 'اللغة الإيطالية', en: 'Italian Language' }, image: '/Images/Teachers/Ms.Fatma-Kamel.jpg' },
   { name: { ar: '', en: '' }, subject: { ar: 'اللغة الإسبانية', en: 'Spanish Language' }, image: '/Images/Teachers/Unknown.jpg' },
