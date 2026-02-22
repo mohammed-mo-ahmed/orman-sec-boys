@@ -29,7 +29,7 @@ export const Footer = () => {
             </p>
             <div className="flex gap-4">
               <a
-                href="https://www.facebook.com/profile.php?id=100063944866785"
+                href="https://www.facebook.com/profile.php?id=61572987415403"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-[#0652ba] rounded-full flex items-center justify-center hover:bg-[#0652ba]/80 transition-colors"
@@ -77,8 +77,8 @@ export const Footer = () => {
         <div className="border-t border-gray-800 pt-6 text-center text-gray-400">
           <p>
             {t(
-              '© 2024 مدرسة الأورمان الثانوية العسكرية بنين. جميع الحقوق محفوظة.',
-              '© 2024 Al-Orman Secondary School for Boys. All rights reserved.'
+              '© 2025 مدرسة الأورمان الثانوية العسكرية بنين. جميع الحقوق محفوظة.',
+              '© 2025 Al-Orman Secondary School for Boys. All rights reserved.'
             )}
           </p>
 
