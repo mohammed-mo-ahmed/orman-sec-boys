@@ -87,7 +87,7 @@ export const Footer = () => {
               <>
                 مُطور بواسطة{' '}
                 <a
-                  href="https://api.whatsapp.com/send/?phone=201110008687"
+                  href="https://api.whatsapp.com/send/?phone=201119819885"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#0652ba] hover:underline"
