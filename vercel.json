@@ -3,3 +3,13 @@
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
+
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://ormansecboys.vercel.app/ar/$1",
+      "permanent": true
+    }
+  ]
+}
