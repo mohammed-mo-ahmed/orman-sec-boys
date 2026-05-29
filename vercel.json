@@ -1,84 +1,9 @@
 {
-"redirects": [
-{
-"source": "/",
-"destination": "https://ormansecboys.vercel.app/ar",
-"permanent": true
-},
-{
-"source": "/overview",
-"destination": "https://ormansecboys.vercel.app/ar/overview",
-"permanent": true
-},
-{
-"source": "/vision",
-"destination": "https://ormansecboys.vercel.app/ar/vision",
-"permanent": true
-},
-{
-"source": "/history",
-"destination": "https://ormansecboys.vercel.app/ar/history",
-"permanent": true
-},
-{
-"source": "/teachers",
-"destination": "https://ormansecboys.vercel.app/ar/teachers",
-"permanent": true
-},
-{
-"source": "/student-union",
-"destination": "https://ormansecboys.vercel.app/ar/student-union",
-"permanent": true
-},
-{
-"source": "/clubs",
-"destination": "https://ormansecboys.vercel.app/ar/clubs",
-"permanent": true
-},
-{
-"source": "/competitions",
-"destination": "https://ormansecboys.vercel.app/ar/competitions",
-"permanent": true
-},
-{
-"source": "/achievements",
-"destination": "https://ormansecboys.vercel.app/ar/achievements",
-"permanent": true
-},
-{
-"source": "/library",
-"destination": "https://ormansecboys.vercel.app/ar/library",
-"permanent": true
-},
-{
-"source": "/resources",
-"destination": "https://ormansecboys.vercel.app/ar/resources",
-"permanent": true
-},
-{
-"source": "/news",
-"destination": "https://ormansecboys.vercel.app/ar/news",
-"permanent": true
-},
-{
-"source": "/gallery",
-"destination": "https://ormansecboys.vercel.app/ar/gallery",
-"permanent": true
-},
-{
-"source": "/alumni",
-"destination": "https://ormansecboys.vercel.app/ar/alumni",
-"permanent": true
-},
-{
-"source": "/faq",
-"destination": "https://ormansecboys.vercel.app/ar/faq",
-"permanent": true
-},
-{
-"source": "/contact",
-"destination": "https://ormansecboys.vercel.app/ar/contact",
-"permanent": true
-}
-]
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://ormansecboys.vercel.app/ar/$1",
+      "permanent": true
+    }
+  ]
 }
